@@ -1,9 +1,42 @@
 import { Global, css } from "@emotion/react";
 
+import fontBlack from "./assets/fonts/NeueMachina/NeueMachina-Black.ttf";
+import fontRegular from "./assets/fonts/NeueMachina/NeueMachina-Regular.ttf";
+import fontBold from "./assets/fonts/NeueMachina/NeueMachina-Bold.ttf";
+import fontMedium from "./assets/fonts/NeueMachina/NeueMachina-Medium.ttf";
+
 export const GlobalStyles: React.FC = () => {
   return (
     <Global
       styles={css`
+        @font-face {
+          font-family: "Neue Machina";
+          src: local(""), url(${fontBlack}) format("truetype");
+          font-weight: 900;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: "Neue Machina";
+          src: local(""), url(${fontRegular}) format("truetype");
+          font-weight: normal;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: "Neue Machina";
+          src: local(""), url(${fontBold}) format("truetype");
+          font-weight: bold;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: "Neue Machina";
+          src: local(""), url(${fontMedium}) format("truetype");
+          font-weight: 500;
+          font-style: normal;
+        }
+
         :root {
           --max-width: 768px;
           --transition-duration: 0.15s;
@@ -21,7 +54,7 @@ export const GlobalStyles: React.FC = () => {
         }
 
         html {
-          font-family: "Raleway", sans-serif;
+          font-family: "Neue Machina", sans-serif;
           font-size: 16px;
           /* CSS custom property for the polyfill */
           --scroll-behavior: smooth;
@@ -53,7 +86,7 @@ export const GlobalStyles: React.FC = () => {
           outline: none;
           border: none;
           border-radius: var(--border-radius);
-          font-family: "Raleway", sans-serif;
+          font-family: "Neue Machina", sans-serif;
           background-color: var(--deep-dark);
           color: var(--white-inno);
         }
