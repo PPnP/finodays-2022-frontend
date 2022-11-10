@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 export const BlockWrapper = styled.div`
   padding: 20px 24px;
   background-color: var(--deep-dark);
+  border-radius: var(--border-radius);
 `;
 
 export const BlockHeader = styled.div`
@@ -16,3 +17,5 @@ export const BlockHeaderSeparator = styled.div`
   background-color: var(--gray-inno);
   opacity: 34%;
 `;
+
+export const BlockContent = styled.div``;

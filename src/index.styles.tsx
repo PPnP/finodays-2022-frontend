@@ -42,6 +42,7 @@ export const GlobalStyles: React.FC = () => {
           --transition-duration: 0.15s;
           --footer-height: 100px;
           --border-radius: 36px;
+          --border-radius-small: 24px;
 
           --black: #000;
           --deep-dark: #1a1a1a;

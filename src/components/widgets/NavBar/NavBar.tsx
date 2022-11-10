@@ -1,33 +1,25 @@
 import { memo } from "react";
 
+import { ReactComponent as HomeIcon } from "../../../assets/icons/home.svg";
+import { ReactComponent as WidgetsIcon } from "../../../assets/icons/widgets.svg";
+import { ReactComponent as CardsIcon } from "../../../assets/icons/cards.svg";
+
 import { NavBarWrapper, NavLinkStyled } from "./styles";
+import { useLocation } from "react-router-dom";
 
 export const NavBar: React.FC = () => {
+  const { pathname } = useLocation();
+
   return (
     <NavBarWrapper>
-      <NavLinkStyled
-        to="/"
-        style={({ isActive }) =>
-          isActive ? { textDecoration: "underline" } : undefined
-        }
-      >
-        landing
+      <NavLinkStyled to="/" active={pathname === "/"}>
+        <HomeIcon />
       </NavLinkStyled>
-      <NavLinkStyled
-        to="/other"
-        style={({ isActive }) =>
-          isActive ? { textDecoration: "underline" } : undefined
-        }
-      >
-        other
+      <NavLinkStyled to="/" active={pathname === "/"}>
+        <WidgetsIcon />
       </NavLinkStyled>
-      <NavLinkStyled
-        to="/"
-        style={({ isActive }) =>
-          isActive ? { textDecoration: "underline" } : undefined
-        }
-      >
-        landing
+      <NavLinkStyled to="/" active={pathname === "/"}>
+        <CardsIcon />
       </NavLinkStyled>
     </NavBarWrapper>
   );
